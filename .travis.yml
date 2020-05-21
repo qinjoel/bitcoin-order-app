@@ -1,9 +1,11 @@
 language: node_js
-node_js: 
+node_js:
   - node
+
 dist: bionic
 sudo: required
 
+<<<<<<< HEAD
 notifications:
   email:
     recipients:
@@ -11,21 +13,60 @@ notifications:
     on_success: always
     on_failure: always
 
+||||||| 81ce2e7
+=======
+notifications:
+  email:
+    recipients:
+      - bunnyppl@gmail.com
+    on_success: always
+    on_failure: always
+>>>>>>> 9e3f9758fae5984c684725b5ab2d5633da37e52e
 branches:
   only:
+<<<<<<< HEAD
    - development
 
+||||||| 81ce2e7
+   - master
+
+=======
+   - development
+>>>>>>> 9e3f9758fae5984c684725b5ab2d5633da37e52e
 before_script:
   - npm install -g @angular/cli
+<<<<<<< HEAD
   
+||||||| 81ce2e7
+  - npm audit fix
+  
+=======
+  - npm install -g now
+>>>>>>> 9e3f9758fae5984c684725b5ab2d5633da37e52e
 script:
+<<<<<<< HEAD
   - ng build --prod --base-href https://qinjoel.github.io/bitcoin-order-app/
+||||||| 81ce2e7
+  - ng lint
+  - ng build --prod --base-href https://kenken64.github.io/bitcoin-order-app/
+=======
+  - ng build --prod --base-href https://kenken64.github.io/bitcoin-order-app/
+>>>>>>> 9e3f9758fae5984c684725b5ab2d5633da37e52e
 
+  
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/bitcoin
+<<<<<<< HEAD
   edge: true
   on: 
    branch: development
+||||||| 81ce2e7
+  on: 
+   branch: master
+=======
+  on:
+    branch: development
+>>>>>>> 9e3f9758fae5984c684725b5ab2d5633da37e52e
